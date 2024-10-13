@@ -1,7 +1,5 @@
-@extends('layout')
-@section('tytul')
-    Start
-@endsection
+@extends('layout.layout')
+@section('tytul','Start')
 @section('podtytul')
     Start w podtytule
 @endsection

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout.layout')
 @section('tytul')
     O nas
 @endsection
