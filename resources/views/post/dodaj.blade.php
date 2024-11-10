@@ -2,7 +2,7 @@
 @section('tytul', 'Dodawanie postu')
 @section('podtytul', 'Dodanie postu')
 @section('tresc')
-    <form action="{{route('post.store')}}" method="post">
+    <form action="{{route('post.store')}}" method="post" >
         @csrf
         <div class="form-group">
             <label for="tytul">Tytuł</label>

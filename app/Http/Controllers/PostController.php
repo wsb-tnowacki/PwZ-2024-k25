@@ -32,13 +32,14 @@ class PostController extends Controller
         //return "store: $request";
         //dd($request);
         $post = new Post();
-        $post->tytul = request('tytul');
+/*         $post->tytul = request('tytul');
         $post->autor = request('autor');
         $post->email = request('email');
         $post->tresc = request('tresc');
         //dd($post);
-        $post->save();
-        return redirect()->route('post.index');
+        $post->save(); */
+        $post->create($request->all());
+        return redirect()->route('post.index')->with('message','Pomyślnie dodano post');
     }
 
     /**
@@ -55,7 +56,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return "edit: $post";
+       return view('post.edytuj', compact('post')); 
     }
 
     /**
@@ -63,7 +64,9 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        return "update: $post";
+        //return "update: $post";
+        $post->update($request->all());
+        return redirect()->route('post.index')->with('message','Pomyślnie zmieniono post');
     }
 
     /**
@@ -71,6 +74,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        return "destroy: $post";
+        $post->delete();
+        return redirect()->route('post.index')->with('message','Pomyślnie usunięto post')->with('class', 'danger');
     }
 }
