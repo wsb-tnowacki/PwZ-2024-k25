@@ -17,11 +17,11 @@
 </div>
 <div class="form-group">
     <label for="data1">Data utworzenia:</label>
-    <input type="text" class="form-control" name="data1" id="data1"  value="{{ $post->created_at }}" disabled> 
+    <input type="text" class="form-control" name="data1" id="data1"  value="{{ date('j F Y H:i:s',strtotime($post->created_at)) }}" disabled> 
 </div>
 <div class="form-group">
     <label for="data2">Data zmiany:</label>
-    <input type="text" class="form-control" name="data2" id="data2"  value="{{ $post->updated_at }}" disabled> 
+    <input type="text" class="form-control" name="data2" id="data2"  value="{{ date('j F Y H:i',strtotime($post->updated_at)) }}" disabled> 
 </div>
 <div class="form-group">
     <label for="tresc">Treść</label>
