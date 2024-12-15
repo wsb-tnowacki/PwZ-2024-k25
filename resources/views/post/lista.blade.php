@@ -18,6 +18,7 @@
             @isset($posty)
             @if($posty->count())
             @php($lp=1)
+            @php($lp=$posty->firstItem())
             @foreach ($posty as $post)
             <tr>
                 <th scope="row">{{ $lp++ }}</th>
@@ -43,10 +44,16 @@
             @else
             <tr>
                 <th  scope="row" colspan="4">Nie ma żadnych postów</th>
-            </tr>    
+            </tr> 
+
+              
+   
             @endisset
         </tbody>
     </table>
+@isset($posty)
+{{ $posty->links() }}  
+@endisset
     <script>
         function confirmDelete()
         {
