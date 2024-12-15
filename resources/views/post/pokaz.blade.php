@@ -10,11 +10,11 @@
     </div>
     <div class="form-group">
         <label for="autor">Autor</label>
-        <input type="text" class="form-control" name="autor" id="autor"  value="{{ $post->autor }}" disabled> 
+        <input type="text" class="form-control" name="autor" id="autor"  value="{{ $post->user->name }}" disabled> 
     </div>
     <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" name="email" id="email"  value="{{ $post->email }}" disabled> 
+        <input type="email" class="form-control" name="email" id="email"  value="{{ $post->user->email }}" disabled> 
     </div>
     <div class="form-group">
         <label for="data1">Data utworzenia:</label>
