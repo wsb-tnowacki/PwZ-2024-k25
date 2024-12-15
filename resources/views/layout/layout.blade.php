@@ -77,7 +77,7 @@
                                 </div>
                                 @if (session()->has('message'))
 
-                                <div class="mt-2 alert alert-@if(session()->has('class')){{session()->get('class')}}@else{{"success"}}@endif alert-dismissible fade show" role="alert">
+                                <div class="mt-2 alert alert-@if(session()->has('class')){{session()->get('class')}}@else{{"success"}}@endif alert-dismissible fade show w-100" role="alert">
                                     <strong>{{ session()->get('message') }}</strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
